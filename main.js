@@ -5,7 +5,7 @@ app.controller('Controller', function Controller($scope) {
     $scope.counter = 0;
     $scope.display_counter = Math.round($scope.counter);
 
-    $scope.increment = 4000;
+    $scope.salary = 4000;
     $scope.monthly = true; // otherwise it is annuary
 
     $scope.refresh_rate = 1;
@@ -13,7 +13,7 @@ app.controller('Controller', function Controller($scope) {
     function incr() {
 
         var amount = 0; // Value won per second
-        amount = $scope.increment / 30.0 / 24.0 / 60.0 / 60.0; //
+        amount = $scope.salary / 30.0 / 24.0 / 60.0 / 60.0; //
         if (!$scope.monthly) {
             amount = amount / 365;
         }
