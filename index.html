@@ -12,17 +12,21 @@
     <script src="main.js"></script>
   </head>
   <body ng-controller="Controller">
-    <form class="form-inline">
-      <div class="form-group">
-        <label class="sr-only" for="input-salary">Salary</label>
-        <div class="input-group">
-          <div class="input-group-addon">$</div>
-          <input type="text" class="form-control"
-                 ng-model="salary" id="input-salary">
-        </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3" id="content">
+        <form class="form-inline">
+          <div class="form-group">
+            <label class="sr-only" for="input-salary">Salary</label>
+            <div class="input-group">
+              <div class="input-group-addon">$</div>
+              <input type="text" class="form-control"
+                     ng-model="salary" id="input-salary">
+            </div>
+          </div>
+        </form>
+        <div id="counter">{{ display_counter }}</div>
+        Debug counter : {{ counter }}
       </div>
-    </form>
-    <div id="counter">{{ display_counter }}</div>
-    Debug counter : {{ counter }}
+    </div>
   </body>
 </html>
