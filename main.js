@@ -17,6 +17,8 @@ app.controller('Controller', function Controller($scope) {
         // Update Start
         if ($scope.startAt === "now") {
             start_tick = page_open.getTime()
+        } else if ($scope.startAt === "day") {
+            start_tick = new Date(page_open.getFullYear(), page_open.getMonth(), page_open.getDate(), 0, 0, 0, 0).getTime()
         } else if ($scope.startAt === "month") {
             start_tick = new Date(page_open.getFullYear(), page_open.getMonth(), 0, 0, 0, 0, 0).getTime()
         } else if ($scope.startAt === "year") {
