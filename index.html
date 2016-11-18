@@ -1,25 +1,19 @@
 <!doctype html>
 
 <html lang="en" ng-app="app">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <title>Real Time Wage</title>
-
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
-
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="main.js"></script>
-</head>
-
-<body ng-controller="Controller">
-  
-  <input type="text" ng-model="salary" id="input-salary">
-
-  <div id="counter">{{ display_counter }}</div>
-
+  </head>
+  <body ng-controller="Controller">
+    <input type="text" ng-model="salary" id="input-salary">
+    <div id="counter">{{ display_counter }}</div>
     Debug counter : {{ counter }}
-
-</body>
-
+  </body>
 </html>
