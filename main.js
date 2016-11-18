@@ -14,7 +14,7 @@ app.controller('Controller', function Controller($scope) {
 
         var amount = 0; // Value won per second
         amount = $scope.salary / 30.0 / 24.0 / 60.0 / 60.0; //
-        if (!($scope.salaryFrequency == "monthly")) {
+        if ($scope.salaryFrequency == "yearly") {
             amount = amount / 365;
         }
 
