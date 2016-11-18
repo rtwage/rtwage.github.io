@@ -12,7 +12,16 @@
     <script src="main.js"></script>
   </head>
   <body ng-controller="Controller">
-    <input type="text" ng-model="salary" id="input-salary">
+    <form class="form-inline">
+      <div class="form-group">
+        <label class="sr-only" for="input-salary">Salary</label>
+        <div class="input-group">
+          <div class="input-group-addon">$</div>
+          <input type="text" class="form-control"
+                 ng-model="salary" id="input-salary">
+        </div>
+      </div>
+    </form>
     <div id="counter">{{ display_counter }}</div>
     Debug counter : {{ counter }}
   </body>
