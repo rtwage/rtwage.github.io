@@ -1,8 +1,22 @@
+html, body, div.row {
+    height: 100%;
+}
+
+div.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+#content {
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
 #counter {
     font-size: 3em;
 }
 
 #content {
     text-align: center;
-    padding-top: 100px;
 }
