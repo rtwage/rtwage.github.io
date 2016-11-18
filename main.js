@@ -23,13 +23,13 @@ app.controller('Controller', ['$scope', '$location' ,function Controller($scope,
     function update() {
         // Update Start
         if ($scope.startAt === "now") {
-            start_tick = page_open.getTime()
+            start_tick = page_open.getTime();
         } else if ($scope.startAt === "day") {
-            start_tick = new Date(page_open.getFullYear(), page_open.getMonth(), page_open.getDate(), 0, 0, 0, 0).getTime()
+            start_tick = new Date(page_open.getFullYear(), page_open.getMonth(), page_open.getDate(), 0, 0, 0, 0).getTime();
         } else if ($scope.startAt === "month") {
-            start_tick = new Date(page_open.getFullYear(), page_open.getMonth(), 0, 0, 0, 0, 0).getTime()
+            start_tick = new Date(page_open.getFullYear(), page_open.getMonth(), 0, 0, 0, 0, 0).getTime();
         } else if ($scope.startAt === "year") {
-            start_tick = new Date(page_open.getFullYear(), 0, 0, 0, 0, 0, 0).getTime()
+            start_tick = new Date(page_open.getFullYear(), 0, 0, 0, 0, 0, 0).getTime();
         }
 
         // Update Diff
