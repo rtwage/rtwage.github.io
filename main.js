@@ -5,13 +5,13 @@ app.controller('Controller', function Controller($scope) {
     $scope.counter = 0;
     $scope.display_counter = Math.round($scope.counter);
 
-    $scope.salary = 4000;
+    $scope.salary = 1000;
     $scope.salaryFrequency = "monthly";
-    $scope.startAt = "now"
+    $scope.startAt = "now";
 
-    var start_tick = 0
+    var start_tick = 0;
     var refresh_rate = 10;
-    var page_open = new Date()
+    var page_open = new Date();
 
     function update() {
         // Update Start
@@ -26,8 +26,8 @@ app.controller('Controller', function Controller($scope) {
         }
 
         // Update Diff
-        var now = new Date().getTime()
-        var diff = (now - start_tick) / 1000.0
+        var now = new Date().getTime();
+        var diff = (now - start_tick) / 1000.0;
 
         var second_gain = $scope.salary / 30.0 / 24.0 / 60.0 / 60.0;
 
@@ -36,7 +36,7 @@ app.controller('Controller', function Controller($scope) {
         }
 
         // Display
-        $scope.counter = diff * second_gain
+        $scope.counter = diff * second_gain;
         $scope.display_counter = $scope.counter.toFixed(5);
         $scope.$apply();
     }
