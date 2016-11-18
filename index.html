@@ -13,8 +13,13 @@
 </head>
 
 <body ng-controller="Controller">
+  
+  <div>
+    <input type="text" placeholder="1000" ng-model="increment">
+  </div>
 
-    {{ display_counter }} <br />
+  <div id="counter">{{ display_counter }}</div>
+
     Debug counter : {{ counter }}
 
 </body>
