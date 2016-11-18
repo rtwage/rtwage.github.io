@@ -22,6 +22,14 @@
               <input type="text" class="form-control"
                      ng-model="salary" id="input-salary">
             </div>
+            <label class="radio-inline">
+              <input type="radio" name="salaryFrequency" ng-model="salaryFrequency"
+                     value="monthly"> monthly
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="salaryFrequency" ng-model="salaryFrequency"
+                     value="yearly"> yearly
+            </label>
           </div>
         </form>
         <div id="counter">{{ display_counter }}</div>

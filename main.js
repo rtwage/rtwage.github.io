@@ -6,7 +6,7 @@ app.controller('Controller', function Controller($scope) {
     $scope.display_counter = Math.round($scope.counter);
 
     $scope.salary = 4000;
-    $scope.monthly = true; // otherwise it is annuary
+    $scope.salaryFrequency = "monthly";
 
     $scope.refresh_rate = 1;
 
@@ -14,13 +14,13 @@ app.controller('Controller', function Controller($scope) {
 
         var amount = 0; // Value won per second
         amount = $scope.salary / 30.0 / 24.0 / 60.0 / 60.0; //
-        if (!$scope.monthly) {
+        if (!($scope.salaryFrequency == "monthly")) {
             amount = amount / 365;
         }
 
         amount = amount * $scope.refresh_rate / 1000.0; // apply refresh rate
 
-        $scope.counter = $scope.counter + amount
+        $scope.counter = $scope.counter + amount;
         $scope.display_counter = Math.round($scope.counter);
 
         $scope.$apply();
