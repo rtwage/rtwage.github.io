@@ -39,7 +39,7 @@ app.controller('Controller', ['$scope', '$location' ,function Controller($scope,
         var second_gain = $scope.salary / 30.0 / 24.0 / 60.0 / 60.0;
 
         if ($scope.salaryFrequency == "yearly") {
-            second_gain = second_gain  / 365;
+            second_gain /= 12;
         }
 
         // Display
