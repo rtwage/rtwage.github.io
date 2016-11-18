@@ -14,7 +14,9 @@
   <body ng-controller="Controller">
     <div class="row">
       <div class="col-md-6 col-md-offset-3" id="content">
-        <form class="form-inline">
+        <div id="counter">{{ display_counter }}$</div>
+
+        <form class="form-inline" id="frequency-form">
           <div class="form-group">
             <label class="sr-only" for="input-salary">Salary</label>
             <div class="input-group">
@@ -32,8 +34,24 @@
             </label>
           </div>
         </form>
-        <div id="counter">{{ display_counter }}</div>
-        Debug counter : {{ counter }}
+
+        <form class="form-inline" id="start-form">
+          <div class="form-group">
+            Amount since
+            <label class="radio-inline">
+              <input type="radio" name="startAt" ng-model="startAt"
+                     value="now">Page Open
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="startAt" ng-model="startAt"
+                     value="month">Start of the Month
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="startAt" ng-model="startAt"
+                     value="year">Start of the Year
+            </label>
+          </div>
+        </form>
       </div>
     </div>
   </body>
