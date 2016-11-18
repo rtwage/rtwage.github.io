@@ -26,6 +26,6 @@ app.controller('Controller', function Controller($scope) {
         $scope.$apply();
     }
 
-    $scope.interval = setInterval(incr, $scope.refresh);
+    $scope.interval = setInterval(incr, $scope.refresh_rate);
 
 });
