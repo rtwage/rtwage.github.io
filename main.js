@@ -1,13 +1,20 @@
 var app = angular.module('app', []);
 
-app.controller('Controller', function Controller($scope) {
+app.config(function($locationProvider) {
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+    });
+});
+
+app.controller('Controller', ['$scope', '$location' ,function Controller($scope, $location) {
 
     $scope.counter = 0;
     $scope.display_counter = Math.round($scope.counter);
 
-    $scope.salary = 1000;
-    $scope.salaryFrequency = "monthly";
-    $scope.startAt = "now";
+    $scope.salary = $location.search().salary || 1000;
+    $scope.salaryFrequency = $location.search().freq || "monthly";
+    $scope.startAt = $location.search().start || "now";
 
     var start_tick = 0;
     var refresh_rate = 10;
@@ -43,4 +50,4 @@ app.controller('Controller', function Controller($scope) {
 
     $scope.interval = setInterval(update, refresh_rate);
 
-});
+}]);
