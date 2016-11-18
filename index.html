@@ -14,7 +14,7 @@
   <body ng-controller="Controller">
     <div class="row">
       <div class="col-md-6 col-md-offset-3" id="content">
-        <div id="counter">${{ display_counter }}</div>
+        <div id="counter">${{ display_counter | number }}</div>
         <hr>
         <form class="form-inline" id="frequency-form">
           <div class="form-group">
